@@ -1,4 +1,3 @@
-FROM openjdk:8-jdk-alpine
-VOLUME /tmp
-ADD target/springboot-crud-restfull-webservices-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+FROM openjdk:19-jdk-alpine3.15 
+COPY target/spring-bet-docker.jar spring-bet-docker.jar
+ENTRYPOINT ["java", "-jar", "/spring-bet-docker.jar"]
